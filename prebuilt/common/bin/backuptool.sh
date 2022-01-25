@@ -48,7 +48,7 @@ check_prereq() {
 if [ ! -r /system/build.prop ]; then
     exit 127
 fi
-if ( ! grep -q "^ro.system.miku.version=$V.*" /system/build.prop ); then
+if ! grep -q "^ro.system.miku.version=$V.*" /system/build.prop; then
   echo "Not backing up files from incompatible version."
   exit 127
 fi
