@@ -41,8 +41,8 @@ PRODUCT_PACKAGES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/miku/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/miku/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/miku/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/miku/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/miku/prebuilt/common/bin/50-miku.sh:system/addon.d/50-miku.sh
 
 # Blur
