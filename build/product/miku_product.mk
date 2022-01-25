@@ -39,6 +39,11 @@ PRODUCT_PACKAGES += \
     TimeZoneUpdater \
     ThemePicker 
 
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/miku/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/miku/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/miku/prebuilt/common/bin/50-miku.sh:system/addon.d/50-miku.sh
 
 # Blur
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -144,4 +149,3 @@ OVERRIDE_TARGET_FLATTEN_APEX := true
 # This needs to be specified explicitly to override ro.apex.updatable=true from
 # prebuilt vendors, as init reads /product/build.prop after /vendor/build.prop
 PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
-
