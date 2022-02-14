@@ -54,4 +54,3 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.miku.version=$(MIKU_ROM_VERSION) \
     ro.miku.buildtype=$(TARGET_MIKU_BUILD_VARIANT) \
     ro.miku.maintainer=$(TARGET_MIKU_MASTER)
-
