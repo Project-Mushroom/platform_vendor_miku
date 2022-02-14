@@ -24,10 +24,11 @@ MIKU_ROM_VERSION := v0.9.5
 
 TARGET_PRODUCT_SHORT := $(subst miku_,,$(TARGET_DEVICE))
 
-ifdef MIKU_GAPPS
+ifeq ($(MIKU_GAPPS), true)
     $(call inherit-product, vendor/gapps/common/common-vendor.mk)
     MIKU_TYPE = GAPPS
 endif
+
 
 ifeq ($(TARGET_MIKU_BUILD_VARIANT),OFFICIAL)
     PLATFORM_MIKU_VERSION := $(PLATFORM_MIKU_RELEASE)
